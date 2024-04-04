@@ -5,7 +5,7 @@ WORKDIR small-springboot-app
 #USER root
 COPY . .
 #RUN chmod 755 /spring-petclinic
-RUN ./mvnw clean package -Dcheckstyle.skip
+RUN maven clean install -Dcheckstyle.skip
 
 
 FROM openjdk:11-jre-slim
